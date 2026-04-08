@@ -1,0 +1,453 @@
+/* ========== PROFESSIONAL LANDING PAGE CSS ========== */
+/* Grey + White palette matching analyzepage.css (charcoal, slate, white) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #e5e7eb;  /* soft grey background like analyzepage */
+  color: #1f2937;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* main container */
+.landing-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAVIGATION (matches analyzepage.css style) ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 0 2rem;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #d1d5db;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* logo image / photo style — preserved as a modern icon/avatar */
+.brand-logo-img {
+  width: 44px;
+  height: 44px;
+  background: #374151;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.3px;
+  color: #1f2937;
+}
+
+.brand-name span {
+  color: #374151;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #4b5563;
+  transition: color 0.2s;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: #1f2937;
+}
+
+.btn-signup {
+  background: #374151;
+  color: white !important;
+  padding: 8px 22px;
+  border-radius: 40px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-signup:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-badge {
+  background: #e5e7eb;
+  color: #374151;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #d1d5db;
+}
+
+.hero-content h1 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1f2937;
+  margin-bottom: 1.2rem;
+}
+
+.accent-text {
+  color: #374151;
+  border-bottom: 3px solid #374151;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+
+.btn-primary {
+  background: #374151;
+  color: white;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.btn-primary:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* hero image (photo / illustration preserved) */
+.hero-visual {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.code-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 1.6rem;
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12);
+  border: 1px solid #d1d5db;
+  width: 100%;
+  max-width: 460px;
+  transition: transform 0.2s;
+}
+
+.code-card:hover {
+  transform: translateY(-4px);
+}
+
+.code-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.code-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+.code-dot:nth-child(1) { background: #dc2626; }
+.code-dot:nth-child(2) { background: #ea580c; }
+.code-dot:nth-child(3) { background: #10b981; }
+
+.code-snippet {
+  font-family: 'SF Mono', 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: #1f2937;
+  line-height: 1.65;
+  background: #f9fafb;
+  padding: 0.8rem;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.code-snippet .kw { color: #374151; font-weight: 600; }
+.code-snippet .fn { color: #ea580c; }
+.code-snippet .cmt { color: #6b7280; }
+
+/* ===== STEPS SECTION (grey/white theme) ===== */
+.steps-section {
+  background: #ffffff;
+  padding: 4rem 2rem;
+  margin: 1.5rem 0;
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 3rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.step-item {
+  background: #f8fafc;
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #374151;
+  color: white;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.step-item h3 {
+  font-size: 1.35rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.step-item p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===== FEATURE HIGHLIGHTS ===== */
+.features-highlight {
+  padding: 4rem 2rem;
+  background: #e5e7eb;
+}
+
+.features-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-block {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #d1d5db;
+  transition: all 0.2s;
+}
+
+.feature-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 2.3rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.feature-block h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.feature-block p {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+/* ===== CTA BANNER (grey/white elegant) ===== */
+.cta-section {
+  margin: 3rem 2rem;
+  border-radius: 32px;
+  background: #1f2937;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(105deg, #1f2937 0%, #2d3a4a 100%);
+}
+
+.cta-section h2 {
+  color: white;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cta-section p {
+  color: #cbd5e1;
+  max-width: 520px;
+  margin: 0 auto 1.8rem auto;
+}
+
+.btn-cta-light {
+  background: white;
+  color: #1f2937;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-cta-light:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #d1d5db;
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+  .hero {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .cta-section {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1.1rem;
+  }
+  .btn-signup {
+    padding: 6px 14px;
+  }
+  .step-number {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+}
